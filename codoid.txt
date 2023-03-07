@@ -1,0 +1,119 @@
+JAVA:
+
+
+1.Write a Java Program whether the string is palindrome or not:
+
+public class Palindrome {
+    public static void main(String args[]) {
+    String s="Palindrome";
+    String rev="";
+    for(int i=s.length()-1;i>+0;i--){
+        char c=s.charAt(i);
+        rev+=c;
+    }
+    if(s==rev)
+     System.out.println("Given string is palindrome");
+     else
+     System.out.println("Given string is not palindrome");
+    }
+}
+
+
+2.write a Java program that checks whether two arrays have same elements:
+
+public class CommonElements {
+    public static void main(String args[]) {
+        int a[]={1,2,3,4,5};
+        int b[]={1,2,3,4,5};
+        int count=0;
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<b.length;j++){
+                if(a[i]==b[j]){
+                count++;
+                }
+            }
+        }
+        if(count>=5)
+        System.out.println("contains same elements");
+        else
+        System.out.println("not contains same elements");
+    }
+}
+
+
+3.write a Java program for fibonacci series upto 10;
+
+public class Fibonacci {
+    public static void main(String args[]) {
+        int f1=0;
+        int f2=1;
+        int f3;
+        System.out.println(f1);
+        System.out.println(f2);
+        for(int i=0;i<10;i++){
+            f3=f1+f2;
+            System.out.println(f3);
+            f1=f2;
+            f2=f3;
+        }
+    }
+}
+
+4.write a java program for Armstrong or not:
+
+public class Armstrong {
+    public static void main(String args[]) {
+        int n=153;
+        int temp;
+        int sum=0;
+        temp=n;
+        while(n!=0){
+            int d=n%10;
+            sum=sum+(d*d*d);
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.println("Given number is armstrong");
+        else
+        System.out.println("Given number is not armstrong");
+    }
+}
+
+
+5.write a program to remove duplicates in array:
+
+public class RemDup {
+    public static void main(String args[]) {
+        int a[]={1,2,3,2,4,5,1};
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                if(a[i]==a[j]){
+                    a[j]=-1;
+                }
+            }
+        }
+        for(int j=0;j<a.length;j++)
+        if(a[j]!=-1)
+        System.out.println(a[j]+" ");
+    }
+}
+
+
+SQL:
+
+1.What is Query to display first 5 Records fro Employee table?
+
+SELECT employe_id, first name FROM employees LIMIT 5;
+
+2.What is Query to display last 5 Records from Employee table?
+
+SELECT * FROM (SELECT TOP 5 * FROM employees ORDER BY ID DESC) ORDER BY id ASC;
+
+3.How to fetch 3rd highest salary using Rank Function?
+
+SELECT salary FROM Table_Name ORDER BY Salary DESC LIMIT 2 , 1
+
+
+
+
+
